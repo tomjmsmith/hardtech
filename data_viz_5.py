@@ -5,7 +5,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
 
-df = pd.read_csv('/Users/tom/Desktop/Hardtech/val_company_data.csv')
+#update this to your path
+df = pd.read_csv('val_company_data.csv')
 
 investors_list = set()
 df['Investors'].dropna().str.split(',').apply(lambda investors: [investors_list.add(investor.strip()) for investor in investors])
